@@ -14,7 +14,7 @@ defmodule Ecto101MigrationsSchemas.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger],
+    [applications: [:logger, :ecto, :postgrex],
      mod: {Ecto101MigrationsSchemas, []}]
   end
 
@@ -28,6 +28,7 @@ defmodule Ecto101MigrationsSchemas.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:postgrex, "~> 0.13.3"},
+     {:ecto, "~> 2.1.4"}]
   end
 end

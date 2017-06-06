@@ -28,3 +28,12 @@ use Mix.Config
 # here (which is why it is important to import them last).
 #
 #     import_config "#{Mix.env}.exs"
+
+config :ecto_101_migrations_schemas, Ecto101MigrationsSchemas.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  database: "ecto_test",
+  username: "postgres",
+  password: "",
+  hostname: "localhost"
+
+config :ecto_101_migrations_schemas, ecto_repos: [Ecto101MigrationsSchemas.Repo]
