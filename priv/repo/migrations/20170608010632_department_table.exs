@@ -3,7 +3,7 @@ defmodule Ecto101MigrationsSchemas.Repo.Migrations.DepartmentTable do
 
   def change do
     create table(:department) do
-      add :name, :text
+      add :name, :text, null: false
 
       timestamps()
     end
